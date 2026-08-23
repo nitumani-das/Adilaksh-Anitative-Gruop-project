@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  /* Brand palette — Herbal & Spice Co. */
+  --color-forest-950: #0f261c;
+  --color-forest-900: #16342a;
+  --color-forest-800: #1e4636;
+  --color-forest-700: #2a5c46;
+
+  --color-leaf-600: #3f6b3f;
+  --color-leaf-500: #4c7c4b;
+  --color-leaf-400: #6d9a63;
+  --color-leaf-100: #e3ecdd;
+
+  --color-gold-600: #a97f22;
+  --color-gold-500: #c69a3c;
+  --color-gold-400: #d8b768;
+  --color-gold-100: #f2e6c8;
+
+  --color-cream-100: #fbf8f1;
+  --color-cream-200: #f7f2e7;
+  --color-cream-300: #efe6d2;
+
+  --color-charcoal-900: #24211c;
+  --color-charcoal-700: #4a453c;
+  --color-charcoal-400: #8a8375;
+
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  --shadow-soft: 0 4px 24px -4px rgb(22 52 42 / 0.12);
+  --shadow-lift: 0 12px 40px -8px rgb(22 52 42 / 0.22);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-charcoal-900);
+  background-color: var(--color-cream-200);
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Visible keyboard focus ring across the site */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-gold-500);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+::selection {
+  background-color: var(--color-gold-400);
+  color: var(--color-forest-950);
+}
+
+/* Light glass effect used sparingly (sticky nav) */
+.glass {
+  background: rgb(251 248 241 / 0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Thin scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream-200);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-leaf-400);
+  border-radius: 999px;
+}
