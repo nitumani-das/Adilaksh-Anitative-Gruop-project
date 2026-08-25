@@ -107,10 +107,10 @@ const CERTIFICATIONS = [
   },
   {
     id: 3,
-    title: 'HACCP Compliance',
-    shortTitle: 'HACCP',
+    title: 'MSME',
+    shortTitle: 'MSME',
     category: 'Quality Assurance',
-    issuer: 'Hazard Analysis and Critical Control Points',
+    issuer: 'Micro, Small and Medium Enterprises',
     description:
       'Our processes are designed around preventive food-safety principles and careful monitoring of critical control points.',
     image:
