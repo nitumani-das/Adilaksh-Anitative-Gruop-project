@@ -32,98 +32,11 @@ export default function Footer() {
 
       <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
 
-
         {/* =====================================================
             BRAND HEADER
         ====================================================== */}
 
-        <div className="pt-14 pb-10 lg:pt-20 lg:pb-12 text-center">
-
-          {/* Logo */}
-          <Link
-            to="/"
-            className="inline-flex flex-col items-center group"
-          >
-
-            {/* Logo container */}
-            <div
-              className="
-                relative
-                w-28 h-28
-                sm:w-32 sm:h-32
-                lg:w-36 lg:h-36
-                rounded-3xl
-                bg-white
-                p-4 sm:p-5
-                flex items-center justify-center
-                shadow-[0_20px_50px_rgba(0,0,0,0.20)]
-                ring-1 ring-white/10
-                group-hover:-translate-y-1
-                transition-all duration-300
-              "
-            >
-
-              <img
-                src={logoUrl}
-                alt={`${BRAND.name} logo`}
-                className="w-full h-full object-contain"
-                loading="lazy"
-              />
-
-            </div>
-
-
-            {/* Company name */}
-            <h2
-              className="
-                mt-5
-                font-display
-                text-2xl
-                sm:text-3xl
-                font-semibold
-                tracking-wide
-                text-white
-              "
-            >
-              Aninative Group
-            </h2>
-
-
-            {/* Tagline */}
-            <p className="mt-2 text-xs sm:text-sm uppercase tracking-[0.25em] text-gold-400">
-              Natural • Authentic • Trusted
-            </p>
-
-          </Link>
-
-
-          {/* Brand description */}
-          <p className="max-w-2xl mx-auto mt-5 text-sm sm:text-base leading-relaxed text-cream-100/50">
-            Building trusted Indian brands inspired by nature, quality and
-            the timeless goodness of natural ingredients.
-          </p>
-
-
-          {/* Decorative divider */}
-          <div className="flex items-center justify-center gap-3 mt-8">
-
-            <div className="w-12 sm:w-20 h-px bg-gradient-to-r from-transparent to-gold-400/50" />
-
-            <div className="w-2 h-2 rounded-full bg-gold-400" />
-
-            <Leaf
-              size={15}
-              className="text-gold-400"
-            />
-
-            <div className="w-2 h-2 rounded-full bg-gold-400" />
-
-            <div className="w-12 sm:w-20 h-px bg-gradient-to-l from-transparent to-gold-400/50" />
-
-          </div>
-
-        </div>
-
+      
 
         {/* =====================================================
             MAIN FOOTER SECTIONS
@@ -143,7 +56,6 @@ export default function Footer() {
               lg:py-14
             "
           >
-
 
             {/* =================================================
                 COMPANY
@@ -297,9 +209,12 @@ export default function Footer() {
               {/* Social buttons */}
               <div className="flex gap-3 mt-6">
 
+                {/* Facebook */}
                 <a
                   href={SITE_CONFIG.social.facebook}
                   aria-label="Facebook"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="
                     w-11 h-11
                     rounded-xl
@@ -314,13 +229,18 @@ export default function Footer() {
                     transition-all duration-300
                   "
                 >
-                  <Globe size={17} />
+                  <span className="font-bold text-lg leading-none">
+                    f
+                  </span>
                 </a>
 
 
+                {/* Instagram */}
                 <a
                   href={SITE_CONFIG.social.instagram}
                   aria-label="Instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="
                     w-11 h-11
                     rounded-xl
@@ -335,13 +255,16 @@ export default function Footer() {
                     transition-all duration-300
                   "
                 >
-                  <Camera size={17} />
+                  <Camera size={18} />
                 </a>
 
 
+                {/* YouTube */}
                 <a
-                  href={SITE_CONFIG.social.linkedin}
-                  aria-label="LinkedIn"
+                  href={SITE_CONFIG.social.youtube}
+                  aria-label="YouTube"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="
                     w-11 h-11
                     rounded-xl
@@ -356,7 +279,11 @@ export default function Footer() {
                     transition-all duration-300
                   "
                 >
-                  <Briefcase size={17} />
+                  <span className="relative flex items-center justify-center">
+                    <span className="w-5 h-4 rounded-[5px] border-2 border-current flex items-center justify-center">
+                      <span className="ml-0.5 w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent border-l-[6px] border-l-current" />
+                    </span>
+                  </span>
                 </a>
 
               </div>
@@ -513,6 +440,7 @@ export default function Footer() {
         </div>
 
       </div>
+
     </footer>
   );
 }
