@@ -36,6 +36,39 @@
 // );
 
 // export default api;
+
+// ----------------------------
+// import axios from 'axios';
+
+// const api = axios.create({
+//   baseURL: import.meta.env.VITE_API_URL
+//     ? `${import.meta.env.VITE_API_URL}/api`
+//     : '/api',
+
+//   withCredentials: true,
+
+//   timeout: 15000,
+// });
+
+// api.interceptors.response.use(
+//   (response) => response.data,
+
+//   (error) => {
+//     const message =
+//       error.response?.data?.message ||
+//       error.message ||
+//       'Something went wrong. Please try again.';
+
+//     return Promise.reject(new Error(message));
+//   }
+// );
+
+// export default api;
+
+
+// -----------------------------
+
+
 import axios from 'axios';
 
 const api = axios.create({
@@ -48,8 +81,10 @@ const api = axios.create({
   timeout: 15000,
 });
 
+// Do NOT unwrap response here.
+// Axios will return the complete response object.
 api.interceptors.response.use(
-  (response) => response.data,
+  (response) => response,
 
   (error) => {
     const message =
@@ -62,3 +97,5 @@ api.interceptors.response.use(
 );
 
 export default api;
+
+
